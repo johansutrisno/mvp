@@ -21,12 +21,9 @@ public class MainPresenter implements BasePresenter<MainView> {
         if (inputanA.isEmpty() || inputanB.isEmpty()) {
             mainView.error();
         } else {
-            // parsing tipe data dari string ke double
-            double valueA = Double.parseDouble(inputanA);
-            double valueB = Double.parseDouble(inputanB);
 
             // kalikan valueA dan valueB
-            double result = valueA * valueB;
+            double result = Double.parseDouble(inputanA) * Double.parseDouble(inputanB);
 
             // create object dari sebuah class
             Result data = new Result(String.valueOf(result));
